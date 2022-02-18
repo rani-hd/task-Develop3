@@ -1,0 +1,14 @@
+.cw {
+  width: 250px;
+  margin: 10px 0;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  margin-right: 10px;
+}

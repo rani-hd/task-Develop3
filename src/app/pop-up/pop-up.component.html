@@ -1,0 +1,33 @@
+
+<div class="container outer">
+  <div id="login" *ngIf="isLogin">
+    <h2>Login</h2>
+    <div class="row">
+      <form class="formBox">
+        <label for="username">Username</label>
+        <input required [(ngModel)]="userData.username" name="username">
+        <label for="password">password</label>
+        <input type="password" required [(ngModel)]="userData.password" name="password">
+        <button class="btn btn-success" (click)="login()">Login</button>
+        <a href="javascript:void(0)" (click)="createNewAccout()">Create new account</a>
+      </form>
+    </div>
+  </div>
+  <div id="signup" *ngIf="!isLogin">
+    <h2>SignUp</h2>
+    <div class="row">
+      <form class="formBox">
+        <label for="name">name</label>
+        <input required [(ngModel)]="userData.name" name="name">
+        <label for="username">Username</label>
+        <input required [(ngModel)]="userData.username" name="username">
+        <label for="email">email</label>
+        <input required [(ngModel)]="userData.email" name="email">
+        <label for="password">password</label>
+        <input type="password" required [(ngModel)]="userData.password" name="password">
+        <button class="btn btn-success" (click)="signUp()">SignUp</button>
+        <a href="javascript:void(0)" (click)="goBackToLogin()">Go Back</a>
+      </form>
+    </div>
+  </div>
+</div>

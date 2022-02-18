@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <h2>Profile</h2>
+    <form class="formBox" [formGroup]="userForm" (ngSubmit)="updateProfile(userForm)">
+      <label for="name">name</label>
+      <input required formControlName="name" />
+      <label for="username">Username</label>
+      <input required formControlName="username" />
+      <label for="email">email</label>
+      <input required formControlName="email" />
+      <label for="password">password</label>
+      <input type="password" required formControlName="password" />
+      <button class="btn btn-success" type="submit">Update Profile</button>
+    </form>
+  </div>
+</div>
