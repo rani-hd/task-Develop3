@@ -90,7 +90,7 @@ export class HomePageComponent implements OnInit {
       for (key of snapshot) {
         if(key.status === 'active'){
           data.push(key);
-          //console.log(key);
+          console.log(key);
         }
       }
       this.allBlogs = data;
