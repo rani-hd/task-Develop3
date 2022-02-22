@@ -25,7 +25,7 @@ export class PopUpComponent implements OnInit {
     // this.dialogRef.close();
     let logUser = this.auth.getUser().subscribe((data) => {
       logUser.unsubscribe();
-      console.log(data);
+     
       let flag = false;
       let user: any = {};
       for (user of data) {
@@ -38,6 +38,7 @@ export class PopUpComponent implements OnInit {
           localStorage.setItem('userId',JSON.stringify(this.userData.username))
           this.userData = {};
           this.dialogRef.close();
+         // console.log(data);
           // this.router.navigate(['home-page']);
         }
       }

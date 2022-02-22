@@ -25,11 +25,12 @@ export class ProfileComponent implements OnInit {
     let logUser = this.auth.getUser().subscribe((data) => {
       logUser.unsubscribe();
       let user: any = {};
-      console.log(Response);
+     // console.log(Response);
       const user_id = this.auth.getUserId();
       for (user of data) {
         if (user.username === user_id) {
           this.userForm.setValue(user);
+          //console.log(user);
         }
       }
     });

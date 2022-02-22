@@ -84,12 +84,13 @@ export class HomePageComponent implements OnInit {
   initUser() {
     let blogcheck = this.coreURL.getData().subscribe((snapshot) => {
       blogcheck.unsubscribe();
-      console.log(snapshot);
+      //console.log(snapshot);
       const data: any = [];
       let key: any = {};
       for (key of snapshot) {
         if(key.status === 'active'){
           data.push(key);
+          //console.log(key);
         }
       }
       this.allBlogs = data;
