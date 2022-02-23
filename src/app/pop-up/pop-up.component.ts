@@ -43,7 +43,7 @@ export class PopUpComponent implements OnInit {
           localStorage.setItem('userId',JSON.stringify(this.userData.username))
           this.userData = {};
           this.dialogRef.close();
-          console.log(user);
+          //console.log(user);
          
           user.username=bcrypt.hash(this.userData.username, salt);
           user.password=bcrypt.hash(this.userData.password, salt);
