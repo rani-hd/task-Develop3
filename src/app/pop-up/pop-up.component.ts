@@ -4,9 +4,9 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
 import { MatDialogRef } from '@angular/material/dialog';
-import * as bcrypt from 'bcryptjs';
+// import * as bcrypt from 'bcryptjs';
 import { where } from 'firebase/firestore';
-const salt = bcrypt.genSaltSync(10);
+// const salt = bcrypt.genSaltSync(10);
 @Component({
   selector: 'app-pop-up',
   templateUrl: './pop-up.component.html',
@@ -45,8 +45,8 @@ export class PopUpComponent implements OnInit {
           this.dialogRef.close();
           //console.log(user);
          
-          user.username=bcrypt.hash(this.userData.username, salt);
-          user.password=bcrypt.hash(this.userData.password, salt);
+          // user.username=bcrypt.hash(this.userData.username, salt);
+          // user.password=bcrypt.hash(this.userData.password, salt);
           console.log(user);
           // this.router.navigate(['home-page']);
         }
